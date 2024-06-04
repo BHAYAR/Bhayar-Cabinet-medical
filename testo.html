@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <?php
+$servername = "localhost"; // ou l'adresse IP du serveur
+$username = "nom_utilisateur"; // le nom d'utilisateur MySQL
+$password = "mot_de_passe"; // le mot de passe MySQL
+$dbname = "nom_base_de_donnees"; // le nom de la base de données
+
+// Crée une connexion
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Vérifie la connexion
+if ($conn->connect_error) {
+    die("Échec de la connexion : " . $conn->connect_error);
+}
+echo "Connexion réussie";
+?>
+</div>
+
+
+
+  
+</body>
+</html>
